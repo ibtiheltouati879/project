@@ -1,35 +1,64 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+// Variable defined OUTSIDE the component (Step 3)
+const courseTitle = "CS220 - Advanced Web Development";
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+    <div>
+      <h1>My First React project</h1>
+    </div>
+  );
 }
 
-export default App
+export default App;
+
+  // Step 7: Function
+  function sayHello() {
+    return "Hello " + studentName + "!";
+  }
+
+  return (
+    <div>
+
+      {/* Step 1 */}
+      <h1>Welcome to My First React Component</h1>
+
+      {/* Step 2 */}
+      <p>Student Name: {studentName}</p>
+
+      {/* Step 3 */}
+      <p>Course: {courseTitle}</p>
+
+      {/* Step 4 */}
+      <p>Welcome to {courseTitle}, {studentName}!</p>
+
+      {/* Step 5 */}
+      <label htmlFor="nameInput">Enter your name:</label>
+      <input id="nameInput" type="text" />
+
+      {/* Step 6 */}
+      <h2>Student Information</h2>
+      <p>Name: {student.name}</p>
+      <p>Age: {student.age}</p>
+      <p>Track: {student.track}</p>
+
+      {/* Step 7 */}
+      <p>{sayHello()}</p>
+
+    </div>
+  );
+}
+
+export default App;
+
+/*
+Step 8 – Reflection Questions
+
+One thing I understand well:
+How JSX allows us to combine JavaScript and HTML.
+
+One thing that is still confusing:
+When to define variables inside vs outside the component.
+
+One mistake I made and fixed:
+I forgot to use curly braces {} to display JavaScript variables in JSX.
+*/
